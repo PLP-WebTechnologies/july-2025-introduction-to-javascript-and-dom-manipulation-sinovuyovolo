@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coffee Calculator</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <h1>The Golden Bean Coffee Calculator</h1>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <h2>Calculate Your Order</h2>
+            <p>Price per cup: <span id="price-per-cup">$2.50</span></p>
+
+            <label for="cups">How many cups?</label>
+            <input type="number" id="cups" name="cups" min="1" value="1">
+
+            <button id="calculate-btn">Calculate Total</button>
+
+            <div class="result">
+                <h3>Your Total:</h3>
+                <p id="total-cost">$0.00</p>
+                <p id="countdown-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
