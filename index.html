@@ -3,31 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Coffee Calculator</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Enkanyezini Livestock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-
     <header>
-        <h1>The Golden Bean Coffee Calculator</h1>
+        <nav class="main-nav">
+            <h1>Enkanyezini Livestock</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Livestock</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h2>Your Partner in Quality Livestock</h2>
+            <p>Providing healthy and well-cared for animals from the heart of Vryheid, KZN.</p>
+        </div>
     </header>
 
     <main>
-        <section class="calculator">
-            <h2>Calculate Your Order</h2>
-            <p>Price per cup: <span id="price-per-cup">$2.50</span></p>
+        <section id="about" class="page-section">
+            <h2>About Us</h2>
+            <p>Enkanyezini Livestock is a family-owned business deeply rooted in the community of Vryheid, KwaZulu-Natal. We are passionate about responsible farming practices and the well-being of our animals. Our mission is to supply local farmers and businesses with superior livestock that thrive in the South African climate.</p>
+        </section>
 
-            <label for="cups">How many cups?</label>
-            <input type="number" id="cups" name="cups" min="1" value="1">
+        <section id="services" class="page-section">
+            <h2>Our Livestock</h2>
+            <div class="livestock-grid">
+                <div class="livestock-card">
+                    <img src="https://share.google/images/znp6BRXUt17SaFlOT" alt="Cattle">
+                    <div class="livestock-card-content">
+                        <h3>Cattle</h3>
+                        <p>Our cattle are known for their strong genetics and adaptability. We raise a variety of breeds suitable for both beef and dairy production, ensuring you get the best quality animals for your needs.</p>
+                    </div>
+                </div>
+                <div class="livestock-card">
+                    <img src="https://share.google/images/SVbotglxSU9z9SLiG" alt="Goats">
+                    <div class="livestock-card-content">
+                        <h3>Goats</h3>
+                        <p>We provide healthy and robust goats for various purposes, including meat and milk production. Our goats are raised in a spacious, natural environment to ensure their well-being.</p>
+                    </div>
+                </div>
+                <div class="livestock-card">
+                    <img src="https://share.google/images/GvtPgyG2OYXVaC5Na" alt="Sheep">
+                    <div class="livestock-card-content">
+                        <h3>Sheep</h3>
+                        <p>Our sheep are carefully selected for their quality and resilience. Whether you're looking for wool or meat, our flock offers exceptional characteristics and health.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="team" class="page-section">
+            <h2>Meet the Team</h2>
+            <p>Learn more about the people behind our commitment to quality.</p>
+            <div class="team-grid">
+                <div class="team-member-card" onclick="toggleBio('member1-bio')">
+                    <img src="https://share.google/images/t7J3lKGkvMA10yQry" alt="Sipho, Farm Manager">
+                    <h3>Sipho Dlamini</h3>
+                    <p>Farm Manager</p>
+                    <div id="member1-bio" class="team-member-bio">
+                        <p>Sipho has over 20 years of experience in animal husbandry. He oversees all daily operations and ensures our livestock receive the best care possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <button id="calculate-btn">Calculate Total</button>
-
-            <div class="result">
-                <h3>Your Total:</h3>
-                <p id="total-cost">$0.00</p>
-                <p id="countdown-message"></p>
+        <section id="contact" class="page-section">
+            <h2>Contact Us</h2>
+            <p>Ready to get in touch? Click the button below to reveal our contact information!</p>
+            <button id="contactBtn">Show Contact Details</button>
+            <div id="contact-details" class="hidden-content">
+                <p><strong>Email:</strong> info@enkanyezini.co.za</p>
+                <p><strong>Phone:</strong> 078-547-1234</p>
+                <p><strong>Address:</strong> Vryheid, KwaZulu-Natal, South Africa</p>
             </div>
         </section>
     </main>
+
+    <footer style="text-align: center; padding: 2rem; color: #64748b;">
+        <p>&copy; 2025 Enkanyezini Livestock. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
